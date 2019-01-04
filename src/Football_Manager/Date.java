@@ -6,8 +6,6 @@ public class Date
 	int month;
 	int year;
 	Date prev;
-	int x;
-	int y;
 	
 	public Date() 
 	{
