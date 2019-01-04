@@ -69,7 +69,7 @@ public class Home_Page extends JFrame {
 		switch (team) 
 		{
 		case "Arsenal":
-			lblNewLabel.setIcon(new ImageIcon("C:\\Users\\\u05D9\u05D5\u05D1\u05DC\\Desktop\\icons\\arsenal.png"));
+			lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\icons\\arsenal.png"));
 			break;
 
 		default:
@@ -167,11 +167,11 @@ public class Home_Page extends JFrame {
 			}
 			if(rs5.getString(1).equals("AFC Bournemouth"))
 			{
-				return "C:\\Users\\\u05D9\u05D5\u05D1\u05DC\\Desktop\\icons\\bournemouth2.png";
+				return "C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\icons\\bournemouth2.png";
 			}
 			else if(rs5.getString(1).equals("Arsenal"))
 			{
-				return "C:\\Users\\\u05D9\u05D5\u05D1\u05DC\\Desktop\\icons\\arsenal2.png";
+				return "C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\icons\\arsenal2.png";
 			}
 			
 		} catch (SQLException e) 

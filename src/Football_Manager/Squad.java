@@ -21,10 +21,9 @@ import javax.swing.JScrollPane;
 public class Squad extends JFrame {
 
 	private JPanel contentPane;
+	Connection connection = null;
 	private JTable table;
 	private JTable table_1;
-	Connection connection = null;
-	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -61,7 +60,7 @@ public class Squad extends JFrame {
 		switch (team) 
 		{
 		case "Arsenal":
-			label.setIcon(new ImageIcon("C:\\Users\\\u05D9\u05D5\u05D1\u05DC\\Desktop\\icons\\arsenal.png"));
+			label.setIcon(new ImageIcon("C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\icons\\arsenal.png"));
 			break;
 
 		default:
@@ -70,20 +69,15 @@ public class Squad extends JFrame {
 		label.setBounds(10, 10, 128, 128);
 		contentPane.add(label);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(236, 212, 962, 363);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 0, 962, 342);
-		panel.add(scrollPane);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(96, 185, 1091, 363);
+		contentPane.add(scrollPane);
 		
 		table = new JTable();
 		scrollPane.setViewportView(table);
 		
 		table_1 = new JTable();
-		table_1.setBounds(236, 568, 962, 75);
+		table_1.setBounds(96, 547, 1091, 63);
 		contentPane.add(table_1);
 		
 		try
@@ -91,6 +85,8 @@ public class Squad extends JFrame {
 			PreparedStatement pst;
 			pst = connection.prepareStatement("SELECT * FROM " + team);
 			ResultSet rs = pst.executeQuery();
+			table.setModel(DbUtils.resultSetToTableModel(rs));
+			
 			PreparedStatement pst1 = connection.prepareStatement("SELECT * FROM "+ (team + "2"));
 			ResultSet rs1 = pst1.executeQuery();
 			table_1.setModel(DbUtils.resultSetToTableModel(rs1));

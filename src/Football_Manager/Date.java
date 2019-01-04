@@ -6,14 +6,12 @@ public class Date
 	int month;
 	int year;
 	Date prev;
-	int x;
-	int z;
 	
 	public Date() 
 	{
 		// TODO Auto-generated constructor stub
-		this.day = 1;
-		this.month = 7;
+		this.day = 30;
+		this.month = 6;
 		this.year = 2018;
 		this.prev = new Date(30,6,2018);
 	}

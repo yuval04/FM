@@ -14,7 +14,7 @@ public class sqliteConnection
 		try 
 		{
 			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\יובל\\Desktop\\Logindatabase.sqlite");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\Logindatabase.sqlite");
 			//JOptionPane.showMessageDialog(null, "Connection Successful");
 			return conn;
 		}catch(Exception e)
@@ -31,7 +31,7 @@ public class sqliteConnection
 		try 
 		{
 			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\יובל\\Desktop\\Yuval.sqlite");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Yuval_David\\Desktop\\יובל\\פרוייקט מנגר\\Yuval.sqlite");
 			//JOptionPane.showMessageDialog(null, "Connection Successful");
 			return conn;
 		}catch(Exception e)
